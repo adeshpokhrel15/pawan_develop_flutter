@@ -5,6 +5,7 @@ abstract class AuthRepository {
   Future<dynamic> signInWithIdAndPassword(String uId, String password);
   Future<dynamic> createUserWithIdAndPassword(String uId, String password);
   Future<dynamic> signOut();
+  Future<dynamic> fetchUserInfo(String uId);
 }
 
 final authRepositoryProvider = Provider<FakeAuthRepository>((ref) {
